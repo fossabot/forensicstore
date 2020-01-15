@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to forensicstore’s documentation! &mdash; forensicstore  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> forensicstore
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to forensicstore’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">forensicstore</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to forensicstore’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-forensicstore.forensicstore">
+<span id="welcome-to-forensicstores-documentation"></span><h1>Welcome to forensicstore’s documentation!<a class="headerlink" href="#module-forensicstore.forensicstore" title="Permalink to this headline">¶</a></h1>
+<p>A ForensicStore is a database that can be used to store forensic items and files.</p>
+<dl class="class">
+<dt id="forensicstore.forensicstore.ForensicStore">
+<em class="property">class </em><code class="descclassname">forensicstore.forensicstore.</code><code class="descname">ForensicStore</code><span class="sig-paren">(</span><em>remote_url: str</em>, <em>read_only: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>ForensicStore is a class to database that can be used to store forensic items and files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>remote_url</strong> (<em>str</em>) – Location of the database. Needs to be a path or a valid pyfilesystem2 url</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_directory_item">
+<code class="descname">add_directory_item</code><span class="sig-paren">(</span><em>artifact: str, dir_path: str, created: Union[datetime.datetime, str], modified: Union[datetime.datetime, str], accessed: Union[datetime.datetime, str], errors: [&lt;class 'str'&gt;]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_directory_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new STIX 2.0 Directory Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>artifact</strong> (<em>str</em>) – Artifact name (non STIX field)</li>
+<li><strong>dir_path</strong> (<em>str</em>) – Specifies the path, as originally observed, to the directory on the file system.</li>
+<li><strong>created</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was created.</li>
+<li><strong>modified</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was last written to/modified.</li>
+<li><strong>accessed</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was last accessed.</li>
+<li><strong>errors</strong> (<em>list</em>) – List of errors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ID if the inserted item</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_file_item">
+<code class="descname">add_file_item</code><span class="sig-paren">(</span><em>artifact</em>, <em>name</em>, <em>created</em>, <em>modified</em>, <em>accessed</em>, <em>origin</em>, <em>errors</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_file_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new STIX 2.0 File Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>artifact</strong> (<em>str</em>) – Artifact name (non STIX field)</li>
+<li><strong>name</strong> (<em>str</em>) – Specifies the name of the file.</li>
+<li><strong>created</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was created.</li>
+<li><strong>modified</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was last written to/modified.</li>
+<li><strong>accessed</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time the file was last accessed.</li>
+<li><strong>origin</strong> (<em>dict</em>) – Origin of the file (non STIX field)</li>
+<li><strong>errors</strong> (<em>list</em>) – List of errors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ID if the inserted item</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_file_item_export">
+<code class="descname">add_file_item_export</code><span class="sig-paren">(</span><em>item_id: str</em>, <em>export_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_file_item_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a writeable context for the contents of the file. Size and hash values are automatically
+calculated for the written data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>item_id</strong> (<em>str</em>) – ID of the item</li>
+<li><strong>export_name</strong> (<em>str</em>) – Optional export name</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A file object with a .write method</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">HashedFile</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_process_item">
+<code class="descname">add_process_item</code><span class="sig-paren">(</span><em>artifact</em>, <em>name</em>, <em>created</em>, <em>cwd</em>, <em>arguments</em>, <em>command_line</em>, <em>return_code</em>, <em>errors</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_process_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new STIX 2.0 Process Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>artifact</strong> (<em>str</em>) – Artifact name (non STIX field)</li>
+<li><strong>name</strong> (<em>str</em>) – Specifies the name of the process.</li>
+<li><strong>created</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the date/time at which the process was created.</li>
+<li><strong>cwd</strong> (<em>str</em>) – Specifies the current working directory of the process.</li>
+<li><strong>arguments</strong> (<em>[</em><em>str</em><em>]</em>) – Specifies the list of arguments used in executing the process. Each argument MUST be
+captured separately as a string.</li>
+<li><strong>command_line</strong> (<em>str</em>) – Specifies the full command line used in executing the process, including the process
+name (depending on the operating system).</li>
+<li><strong>return_code</strong> (<em>int</em>) – Return code of the process (non STIX field)</li>
+<li><strong>errors</strong> (<em>list</em>) – List of errors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ID if the inserted item</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_process_item_stderr">
+<code class="descname">add_process_item_stderr</code><span class="sig-paren">(</span><em>item_id: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_process_item_stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a writeable context for the output on stderr of a process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<em>str</em>) – ID of the item</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A file object with a .write method</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">HashedFile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_process_item_stdout">
+<code class="descname">add_process_item_stdout</code><span class="sig-paren">(</span><em>item_id: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_process_item_stdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a writeable context for the output on stdout of a process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<em>str</em>) – ID of the item</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A file object with a .write method</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">HashedFile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_process_item_wmi">
+<code class="descname">add_process_item_wmi</code><span class="sig-paren">(</span><em>item_id: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_process_item_wmi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a writeable context for the WMI output of a process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<em>str</em>) – ID of the item</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A file object with a .write method</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">HashedFile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_registry_key_item">
+<code class="descname">add_registry_key_item</code><span class="sig-paren">(</span><em>artifact</em>, <em>modified</em>, <em>key</em>, <em>errors</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_registry_key_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new STIX 2.0 Windows Registry Key Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>artifact</strong> (<em>str</em>) – Artifact name (non STIX field)</li>
+<li><strong>modified</strong> (<em>datetime</em><em> or </em><em>str</em>) – Specifies the last date/time that the registry key was modified.</li>
+<li><strong>key</strong> (<em>str</em>) – Specifies the full registry key including the hive.</li>
+<li><strong>errors</strong> (<em>list</em>) – List of errors</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ID if the inserted item</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.add_registry_value_item">
+<code class="descname">add_registry_value_item</code><span class="sig-paren">(</span><em>key_id: str</em>, <em>data_type: str</em>, <em>data: bytes</em>, <em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.add_registry_value_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a STIX 2.0 Windows Registry Value Type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key_id</strong> (<em>str</em>) – Item ID of the parent windows registry key</li>
+<li><strong>data_type</strong> (<em>str</em>) – Specifies the registry (REG_*) data type used in the registry value.</li>
+<li><strong>data</strong> (<em>bytes</em>) – Specifies the data contained in the registry value.</li>
+<li><strong>name</strong> (<em>str</em>) – Specifies the name of the registry value. For
+specifying the default value in a registry key, an empty string MUST be used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.export_stix">
+<code class="descname">export_stix</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.export_stix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a valid STIX 2.0 observed data object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.import_forensicstore">
+<code class="descname">import_forensicstore</code><span class="sig-paren">(</span><em>url: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.import_forensicstore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import ForensicStore file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> (<em>str</em>) – Location of the observed data file. Needs to be a path or a valid pyfilesystem2 url</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forensicstore.forensicstore.ForensicStore.import_stix">
+<code class="descname">import_stix</code><span class="sig-paren">(</span><em>url: str</em><span class="sig-paren">)</span><a class="headerlink" href="#forensicstore.forensicstore.ForensicStore.import_stix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import Observed Data file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> (<em>str</em>) – Location of the observed data file. Needs to be a path or a valid pyfilesystem2 url</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019 Siemens AG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
